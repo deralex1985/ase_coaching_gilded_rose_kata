@@ -9,10 +9,9 @@
 
 ## Anforderungen
 - Selling goods
-- Goods deprecated in Qulaity as we get closer to "sell by date"
+- Goods deprecated in Quality as we get closer to "sell by date"
 
-
-- Inventory system:
+### Inventory system:
   - stores Items with properties: 
     - "Quality" -> the price, cannot be negative 
     - "SellIn" -> days left to sell the item
@@ -22,6 +21,21 @@
     - Items have a fucntion where we can check if it can be sold 
   - Values are updated every day
   - Various Items implement the Quality over Time function differently, but always in relation to a default
+
+### Details on quality over Time for different items
+- Default product:
+  - Once the sell by date has passed, Quality degrades twice as fast 
+  - The Quality of an item is never negative
+  - The Quality of an item is never more than 50
+- "Aged Brie":
+  -  increases in Quality the older it gets
+- "Sulfuras":
+  - never has to be sold
+  - does not decreases in Quality
+- "Backstage passes":
+  - increases in Quality the older it gets (just like Brie)
+  - Quality increases by 2 when there are 10 days or less and by 3 when there are 5 days or less but
+  - Quality drops to 0 after the concert
   
     
   **Class Item is not to be touched!**
