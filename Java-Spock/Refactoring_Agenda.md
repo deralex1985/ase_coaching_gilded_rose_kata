@@ -36,6 +36,8 @@
   - increases in Quality the older it gets (just like Brie)
   - Quality increases by 2 when there are 10 days or less and by 3 when there are 5 days or less but
   - Quality drops to 0 after the concert
+- "Conjured Items":
+  - degrade in Quality twice as fast as normal items
   
     
   **Class Item is not to be touched!**
