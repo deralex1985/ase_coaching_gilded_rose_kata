@@ -1,7 +1,9 @@
 ## Vorgehen
  - Anforderungen verstehen: Gilded Rose Requirements lesen
  - Bestehendes Verhalten absichern durch Test welche das TexttestFixture nutzt 
- - Bestehenden Test scheint nur als Schablone für Itmes zu gelten. Kann sein das das Setup auf Grund der Struktur kein Sinn macht.
+ - Feststellen welche der ANfroderunegn bereits durch Testfiyture abgedekct sind und wleche noch nicht
+ - Coverage Lücken schliessen durch Verwendung der bestehenden Test Schablone
+ - Coverage Report verwenden um Festzustellen was noch fehlt
  - Alle Tests hinzufügen die es braucht un die Anforderungen abzusichern
  - Beginn des eigentlichen Refactorings. 
    - Tiny steps
@@ -39,6 +41,11 @@
   - Quality drops to 0 after the concert
 - "Conjured Items":
   - degrade in Quality twice as fast as normal items
+
+### Requirements not covered by updated Testfixture
+- Sulfuras never has to be sold 
+- Sulfuras does not decreases in Quality
+- Conjured Items degrade in Quality twice as fast as normal items -> Fixture expects default pace of degradation
   
     
   **Class Item is not to be touched!**
