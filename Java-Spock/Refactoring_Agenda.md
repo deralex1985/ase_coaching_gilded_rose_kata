@@ -43,8 +43,7 @@
   - degrade in Quality twice as fast as normal items
 
 ### Requirements not covered by updated Testfixture
-- Sulfuras never has to be sold 
-- Sulfuras does not decreases in Quality
+- Sulfuras never has to be sold
 - Conjured Items degrade in Quality twice as fast as normal items -> Fixture expects default pace of degradation
   
     
