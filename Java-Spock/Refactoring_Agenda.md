@@ -1,6 +1,7 @@
 ## Vorgehen
  - Anforderungen verstehen: Gilded Rose Requirements lesen
- - Bestehenden Test fixen
+ - Bestehendes Verhalten absichern durch Test welche das TexttestFixture nutzt 
+ - Bestehenden Test scheint nur als Schablone für Itmes zu gelten. Kann sein das das Setup auf Grund der Struktur kein Sinn macht.
  - Alle Tests hinzufügen die es braucht un die Anforderungen abzusichern
  - Beginn des eigentlichen Refactorings. 
    - Tiny steps
