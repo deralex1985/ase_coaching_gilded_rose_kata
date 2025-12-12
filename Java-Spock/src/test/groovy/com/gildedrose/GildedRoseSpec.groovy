@@ -22,4 +22,18 @@ class GildedRoseSpec extends Specification {
         app.items[0].name == "fixme"
     }
 
+    def "should update quality correctly for Aged Brie"() {
+        given: "Aged Brie"
+        Item[] items = [new Item("Aged Brie", 0, 0)];
+
+        and: "the application with these items"
+        GildedRose app = new GildedRose(items);
+
+        when: "updating quality"
+        app.updateQuality();
+
+        then: "the quality is correct"
+        app.items[0].name == "fixme"
+    }
+
 }
