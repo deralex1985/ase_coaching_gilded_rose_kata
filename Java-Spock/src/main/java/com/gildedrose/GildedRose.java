@@ -69,6 +69,9 @@ class GildedRose {
                 }
             }
             item.sellIn = item.sellIn - 1;
+            if(item.sellIn < 0){
+                item.quality = 0;
+            }
         }
         if (item.name.equals(SULFURAS.description)) {
             // tbd
@@ -89,11 +92,6 @@ class GildedRose {
     private void updateExpiredItems(Item item) {
         if (item.sellIn < 0) {
             if (!item.name.equals(AGED_BRIE.description)) {
-                if (!item.name.equals(BACKSTAGE_PASSES.description)) {
-                //
-                } else {
-                    item.quality = item.quality - item.quality;
-                }
             } else {
                 if (item.quality < 50) {
                     item.quality = item.quality + 1;
