@@ -13,27 +13,29 @@ class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
-            updateQualityForDefaultItem(item);
-            updateSellInForDefaultItem(item);
+            updateItem(item);
             updateExpiredItems(item);
         }
     }
 
-    private void updateQualityForDefaultItem(Item item) {
+    private void updateItem(Item item) {
         if (item.name.equals(DEXTERITY_VEST.description)) {
             if (item.quality > 0) {
                 item.quality = item.quality - 1;
             }
+            item.sellIn = item.sellIn - 1;
         }
         if (item.name.equals(ELIXIR_OF_THE_MONGOOSE.description)) {
             if (item.quality > 0) {
                 item.quality = item.quality - 1;
             }
+            item.sellIn = item.sellIn - 1;
         }
         if (item.name.equals(CONJURED_MANA_CAKE.description)) {
             if (item.quality > 0) {
                 item.quality = item.quality - 1;
             }
+            item.sellIn = item.sellIn - 1;
         }
         if (item.name.equals(AGED_BRIE.description)) {
             if (item.quality < 50) {
@@ -53,7 +55,7 @@ class GildedRose {
                     }
                 }
             }
-
+            item.sellIn = item.sellIn - 1;
         }
         if (item.name.equals(BACKSTAGE_PASSES.description)) {
             if (item.quality < 50) {
@@ -73,18 +75,13 @@ class GildedRose {
                     }
                 }
             }
-
+            item.sellIn = item.sellIn - 1;
         }
         if (item.name.equals(SULFURAS.description)) {
             // tbd
         }
     }
 
-    private void updateSellInForDefaultItem(Item item) {
-        if (!item.name.equals(SULFURAS.description)) {
-            item.sellIn = item.sellIn - 1;
-        }
-    }
 
     private void updateExpiredItems(Item item) {
         if (item.sellIn < 0) {
