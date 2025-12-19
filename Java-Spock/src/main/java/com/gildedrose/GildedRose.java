@@ -20,15 +20,22 @@ class GildedRose {
     }
 
     private void updateQualityForDefaultItem(Item item) {
-        if (!item.name.equals(AGED_BRIE.description)
-                && !item.name.equals(BACKSTAGE_PASSES.description)
-                && !item.name.equals(SULFURAS.description)
-                && item.quality > 0) {
-            item.quality = item.quality - 1;
+        if (item.name.equals(DEXTERITY_VEST.description)) {
+            if (item.quality > 0) {
+                item.quality = item.quality - 1;
+            }
         }
-
-
-        if (item.name.equals(AGED_BRIE.description) || item.name.equals(BACKSTAGE_PASSES.description)) {
+        if (item.name.equals(ELIXIR_OF_THE_MONGOOSE.description)) {
+            if (item.quality > 0) {
+                item.quality = item.quality - 1;
+            }
+        }
+        if (item.name.equals(CONJURED_MANA_CAKE.description)) {
+            if (item.quality > 0) {
+                item.quality = item.quality - 1;
+            }
+        }
+        if (item.name.equals(AGED_BRIE.description)) {
             if (item.quality < 50) {
                 item.quality = item.quality + 1;
 
@@ -46,6 +53,30 @@ class GildedRose {
                     }
                 }
             }
+
+        }
+        if (item.name.equals(BACKSTAGE_PASSES.description)) {
+            if (item.quality < 50) {
+                item.quality = item.quality + 1;
+
+                if (item.name.equals(BACKSTAGE_PASSES.description)) {
+                    if (item.sellIn < 11) {
+                        if (item.quality < 50) {
+                            item.quality = item.quality + 1;
+                        }
+                    }
+
+                    if (item.sellIn < 6) {
+                        if (item.quality < 50) {
+                            item.quality = item.quality + 1;
+                        }
+                    }
+                }
+            }
+
+        }
+        if (item.name.equals(SULFURAS.description)) {
+            // tbd
         }
     }
 
