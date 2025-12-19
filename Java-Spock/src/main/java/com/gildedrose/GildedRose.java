@@ -14,7 +14,6 @@ class GildedRose {
     public void updateQuality() {
         for (Item item : items) {
             updateItem(item);
-            updateExpiredItems(item);
         }
     }
 
@@ -35,6 +34,9 @@ class GildedRose {
                 item.quality = item.quality + 1;
             }
             item.sellIn = item.sellIn - 1;
+            if (item.sellIn < 0 && item.quality < 50) {
+                    item.quality = item.quality + 1;
+            }
         }
         if (item.name.equals(BACKSTAGE_PASSES.description)) {
             if (item.quality < 50) {
@@ -55,7 +57,7 @@ class GildedRose {
                 }
             }
             item.sellIn = item.sellIn - 1;
-            if(item.sellIn < 0){
+            if (item.sellIn < 0) {
                 item.quality = 0;
             }
         }
@@ -74,15 +76,4 @@ class GildedRose {
         }
     }
 
-
-    private void updateExpiredItems(Item item) {
-        if (item.sellIn < 0) {
-            if (!item.name.equals(AGED_BRIE.description)) {
-            } else {
-                if (item.quality < 50) {
-                    item.quality = item.quality + 1;
-                }
-            }
-        }
-    }
 }
