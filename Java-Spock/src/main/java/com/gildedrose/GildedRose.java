@@ -20,12 +20,11 @@ class GildedRose {
     }
 
     private void updateQualityForDefaultItem(Item item) {
-        if (!item.name.equals(AGED_BRIE.description) && !item.name.equals(BACKSTAGE_PASSES.description)) {
-            if (item.quality > 0) {
-                if (!item.name.equals(SULFURAS.description)) {
-                    item.quality = item.quality - 1;
-                }
-            }
+        if (!item.name.equals(AGED_BRIE.description)
+                && !item.name.equals(BACKSTAGE_PASSES.description)
+                && !item.name.equals(SULFURAS.description)
+                && item.quality > 0) {
+            item.quality = item.quality - 1;
         }
 
 
