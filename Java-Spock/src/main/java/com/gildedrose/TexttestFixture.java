@@ -18,7 +18,21 @@ public class TexttestFixture {
         // this conjured item does not work properly yet
         items.add(new Item("Conjured Mana Cake", 3, 6));
 
-        GildedRose app = new GildedRose(items);
+
+
+        List<CustomItem> customItems = new ArrayList<>();
+        customItems.add(new CustomItem(new Item("+5 Dexterity Vest", 3, 12) , new DefaultUpdateBehaviour()));
+        customItems.add(new CustomItem(new Item("Aged Brie", 2, 0), new DefaultUpdateBehaviour()));
+        customItems.add(new CustomItem(new Item("Sulfuras, Hand of Ragnaros", 0, 80) , new DefaultUpdateBehaviour()));
+        customItems.add(new CustomItem(new Item("Sulfuras, Hand of Ragnaros", -1, 80), new DefaultUpdateBehaviour()));
+        customItems.add(new CustomItem(new Item("Elixir of the Mongoose", 5, 7) , new DefaultUpdateBehaviour()));
+        customItems.add(new CustomItem(new Item("Backstage passes to a TAFKAL80ETC concert", 15, 20), new DefaultUpdateBehaviour()));
+        customItems.add(new CustomItem(new Item("Backstage passes to a TAFKAL80ETC concert", 10, 30), new DefaultUpdateBehaviour()));
+        customItems.add(new CustomItem(new Item("Backstage passes to a TAFKAL80ETC concert", 5, 45), new DefaultUpdateBehaviour()));
+        // this conjured item does not work properly yet
+        customItems.add(new CustomItem(new Item("Conjured Mana Cake", 3, 6), new DefaultUpdateBehaviour()));
+
+        GildedRose app = new GildedRose(items, customItems);
 
         int days = 10;
         if (args.length > 0) {
