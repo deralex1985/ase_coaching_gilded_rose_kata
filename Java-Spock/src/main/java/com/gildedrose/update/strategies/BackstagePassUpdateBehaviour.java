@@ -1,6 +1,9 @@
-package com.gildedrose;
+package com.gildedrose.update.strategies;
 
-public class BackstagePassUpdateBehaviour implements UpdateBehaviour{
+import com.gildedrose.model.Item;
+import com.gildedrose.update.api.UpdateBehaviour;
+
+public class BackstagePassUpdateBehaviour implements UpdateBehaviour {
 
     @Override
     public void update(Item item) {

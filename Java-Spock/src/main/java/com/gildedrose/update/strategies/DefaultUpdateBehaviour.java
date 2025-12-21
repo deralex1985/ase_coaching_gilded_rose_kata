@@ -1,4 +1,7 @@
-package com.gildedrose;
+package com.gildedrose.update.strategies;
+
+import com.gildedrose.model.Item;
+import com.gildedrose.update.api.UpdateBehaviour;
 
 public class DefaultUpdateBehaviour implements UpdateBehaviour {
     @Override

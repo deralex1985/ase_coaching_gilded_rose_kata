@@ -1,5 +1,6 @@
-package com.gildedrose;
+package com.gildedrose.model;
 
+import com.gildedrose.update.api.UpdateBehaviour;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
